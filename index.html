@@ -657,6 +657,61 @@ footer:before{content:"✧  ❦  ✧";display:block;color:var(--gold);font-size:
 @media(prefers-reduced-motion:reduce){.event-card,.btn,.envelope-wrap{animation:none!important;transition:none!important}}
 </style>
 
+
+<style>
+/* User-requested: remove the top Hritika & Naman header/navigation bar. */
+header, .site-header, #site-header, .navbar, .nav-bar, .topbar, .top-bar {
+  display: none !important;
+}
+</style>
+
+
+<style id="invitation-typography-refinement">
+/* Refined invitation typography only: one harmonious serif family, with hierarchy from scale and spacing. */
+#home .topline,
+#home .cinematic-intro,
+#home .cinematic-couple .person-block h1,
+#home .cinematic-couple .parent-names,
+#home .couple-ampersand {
+  font-family: var(--serif, "Bodoni 72", "Didot", "Baskerville", Georgia, serif) !important;
+}
+#home .topline {
+  font-size: clamp(.88rem, 1.5vw, 1.05rem) !important;
+  font-weight: 400 !important; letter-spacing: .12em !important;
+  line-height: 1.6 !important; text-transform: none !important;
+  color: #956d37 !important;
+}
+#home .cinematic-intro {
+  max-width: 570px; margin: 14px auto 0 !important;
+  font-size: clamp(1.02rem, 1.8vw, 1.25rem) !important;
+  font-style: italic !important; font-weight: 400 !important;
+  letter-spacing: .015em !important; line-height: 1.7 !important;
+  color: #78575a !important;
+}
+#home .cinematic-couple .person-block h1 {
+  font-size: clamp(3.25rem, 7vw, 5.7rem) !important;
+  font-weight: 400 !important; font-style: normal !important;
+  letter-spacing: -.025em !important; line-height: 1.02 !important;
+  margin: 0 0 12px !important;
+}
+#home .cinematic-couple .parent-names {
+  display: block; max-width: 320px; margin: 0 auto !important;
+  font-size: clamp(.88rem, 1.35vw, 1rem) !important;
+  font-weight: 400 !important; font-style: normal !important;
+  line-height: 1.75 !important; letter-spacing: .015em !important;
+  color: #775d5d !important; text-shadow: none !important;
+}
+#home .couple-ampersand {
+  font-family: var(--serif, Georgia, serif) !important;
+  font-weight: 400 !important; font-style: italic !important;
+}
+@media (max-width: 600px) {
+  #home .topline { letter-spacing: .07em !important; }
+  #home .cinematic-couple .person-block h1 { font-size: clamp(2.8rem, 12vw, 4.2rem) !important; }
+  #home .cinematic-couple .parent-names { max-width: 250px; font-size: .8rem !important; }
+}
+</style>
+
 </head>
 <body class="locked"><div class="intro-screen" id="intro">
 <div class="intro-glow"></div>
@@ -692,19 +747,17 @@ footer:before{content:"✧  ❦  ✧";display:block;color:var(--gold);font-size:
 <div class="hero-content cinematic-invitation">
 
 <div class="cinematic-heart">♥</div>
-<div class="topline reveal">With the blessings of our families</div>
-<p class="cinematic-intro reveal delay-1">We joyfully invite you to celebrate the wedding of</p>
+<div class="topline reveal">With the blessings of the almighty and our elders</div>
+<p class="cinematic-intro reveal delay-1">we invite you to join us in celebrating the wedding ceremony of -</p>
 <div class="cinematic-couple reveal delay-1">
 <div class="person-block">
 <h1>Hritika</h1>
-<span class="family-role">Daughter of</span>
-<strong class="parent-names">Satish Agarwal &amp; Geetu Agarwal</strong>
+<strong class="parent-names">D/o. Mrs. Geetu Agarwal &amp; Mr. Satish Agarwal</strong>
 </div>
 <div class="couple-ampersand gold-shimmer">&amp;</div>
 <div class="person-block">
 <h1>Naman</h1>
-<span class="family-role">Son of</span>
-<strong class="parent-names">Naveen Sundriyal &amp; Nirmala Sundriyal</strong>
+<strong class="parent-names">S/o. Mrs. Nirmala Sundriyal &amp; Mr. Naveen Sundriyal</strong>
 </div>
 </div>
 <div class="hero-cta reveal delay-3"><a class="btn primary" href="#reveal">Reveal the wedding date <span>↓</span></a><a class="btn" href="#rsvp">Kindly RSVP</a></div>
@@ -720,12 +773,11 @@ footer:before{content:"✧  ❦  ✧";display:block;color:var(--gold);font-size:
 <p class="section-intro">Every love story has a day that changes everything.<br/>Scratch the heart to discover ours.</p>
 <div class="scratch-shell">
 <div class="scratch-heart" id="scratchHeart">
-<svg aria-hidden="true" viewbox="0 0 320 290"><path d="M160 266 C136 244 24 170 24 91 C24 24 104 7 160 69 C216 7 296 24 296 91 C296 170 184 244 160 266Z" fill="#fff8ed" stroke="#b68a4b" stroke-width="2"></path><path d="M160 250 C132 225 40 164 40 94 C40 42 104 27 160 83 C216 27 280 42 280 94 C280 164 188 225 160 250Z" fill="none" stroke="#d9b879" stroke-dasharray="2 5" stroke-width="1"></path></svg>
+<svg aria-hidden="true" viewbox="0 0 320 290"><path d="M160 263.9 C137.6 240.7 24 171.1 24 89.9 C24 11.6 115.2 5.8 160 72.5 C204.8 5.8 296 11.6 296 89.9 C296 171.1 182.4 240.7 160 263.9Z" fill="#fff8f1" stroke="#b68a4b" stroke-width="2"></path></svg>
 <div class="heart-date"><div class="date-small">Save the date</div><div class="date-big">4 December<br/>2026</div><div class="date-flourish">✧ ❦ ✧</div></div>
 <canvas aria-label="Scratch the heart to reveal the wedding date" id="scratchCanvas"></canvas>
 </div>
-<div class="scratch-instruction" id="scratchInstruction">✦ Scratch gently with your finger or mouse ✦</div>
-<button class="btn secondary" id="scratchReset" type="button">Reset heart</button>
+<div class="scratch-instruction" id="scratchInstruction">A little secret awaits… scratch gently to reveal</div>
 </div>
 </div>
 </section>
@@ -801,7 +853,7 @@ footer:before{content:"✧  ❦  ✧";display:block;color:var(--gold);font-size:
 </div>
 </section>
 </main>
-<footer><div class="ornament">✧ ❦ ✧</div><div class="names serif">Hritika &amp; Naman</div><div>With love, and with the blessings of our families.</div><div class="smallcaps" style="margin-top:15px;font-size:.58rem">A new chapter begins</div></footer>
+<footer><div class="ornament">✧ ❦ ✧</div><div class="names serif">Hritika &amp; Naman</div><div>With love, and With the blessings of the almighty and our elders.</div><div class="smallcaps" style="margin-top:15px;font-size:.58rem">A new chapter begins</div></footer>
 <script>
 // Add your deployed Google Apps Script web app URL here after setup.
 const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbySRGe5EeUKaEVHXpN60509tOtRdqyiYqdYEF5rXmDy8rv-XBiv04zTtLU0ZItC46qh/exec";
@@ -815,6 +867,15 @@ const canvas = document.getElementById("scratchCanvas");
 const ctx = canvas.getContext("2d", {willReadFrequently:true});
 const heart = document.getElementById("scratchHeart");
 let drawing=false, revealed=false, lastPoint=null, scratched=false;
+const SCRATCH_REVEALED_KEY = "hritikaNamanWeddingDateRevealed";
+function isDateRevealed(){
+  try { return window.localStorage.getItem(SCRATCH_REVEALED_KEY) === "true"; }
+  catch (_) { return false; }
+}
+function rememberDateRevealed(){
+  try { window.localStorage.setItem(SCRATCH_REVEALED_KEY, "true"); }
+  catch (_) { /* The revealed state still persists for the current page session. */ }
+}
 function heartPath(c,w,h){
   c.beginPath(); c.moveTo(w*.5,h*.91);
   c.bezierCurveTo(w*.43,h*.83,w*.075,h*.59,w*.075,h*.31);
@@ -823,36 +884,116 @@ function heartPath(c,w,h){
   c.bezierCurveTo(w*.925,h*.59,w*.57,h*.83,w*.5,h*.91); c.closePath();
 }
 function setupScratch(){
-  const rect=heart.getBoundingClientRect(); const dpr=Math.min(window.devicePixelRatio||1,2);
+  const rect=heart.getBoundingClientRect();
+  if(!rect.width||!rect.height)return;
+  drawing=false;lastPoint=null;
+
+  // Once revealed, keep the date revealed even if resizing or scrolling causes
+  // the browser to fire a resize event or the page is revisited.
+  if(isDateRevealed()){
+    revealed=true;
+    heart.classList.add("revealed");
+    canvas.style.opacity="0";
+    canvas.style.pointerEvents="none";
+    document.getElementById("scratchInstruction").textContent="The day we begin forever — 4 December 2026";
+    return;
+  }
+
+  const dpr=Math.min(window.devicePixelRatio||1,2);
   canvas.width=Math.round(rect.width*dpr); canvas.height=Math.round(rect.height*dpr);
   canvas.style.width=rect.width+"px"; canvas.style.height=rect.height+"px";
   ctx.setTransform(dpr,0,0,dpr,0,0); ctx.globalCompositeOperation="source-over";
-  const g=ctx.createLinearGradient(0,0,rect.width,rect.height);g.addColorStop(0,"#d7b77e");g.addColorStop(.45,"#f0dfbf");g.addColorStop(1,"#c79b61");
+  // Glittery blush-pink cover: luminous satin gradient with fine scattered sparkles.
+  const g=ctx.createLinearGradient(0,0,rect.width,rect.height);
+  g.addColorStop(0,"#e9b8c4");
+  g.addColorStop(.28,"#f5d4dd");
+  g.addColorStop(.53,"#d995ad");
+  g.addColorStop(.76,"#f1c5d2");
+  g.addColorStop(1,"#d99bb0");
   ctx.fillStyle=g;heartPath(ctx,rect.width,rect.height);ctx.fill();
   ctx.save();heartPath(ctx,rect.width,rect.height);ctx.clip();
-  ctx.strokeStyle="rgba(108,38,57,.32)";ctx.lineWidth=1;
-  for(let y=10;y<rect.height;y+=13){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(rect.width,y-7);ctx.stroke();}
+
+  // Fine, randomly distributed foil-like glints instead of horizontal paper lines.
+  let seed=20261204;
+  const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
+  for(let i=0;i<175;i++){
+    const x=rand()*rect.width, y=rand()*rect.height;
+    const r=.35+rand()*1.15;
+    ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=rand()>.5?"rgba(255,250,239,.82)":"rgba(255,226,237,.7)";
+    ctx.fill();
+    if(i%13===0){
+      ctx.strokeStyle="rgba(255,250,239,.82)";ctx.lineWidth=.75;
+      ctx.beginPath();ctx.moveTo(x-r*2.2,y);ctx.lineTo(x+r*2.2,y);
+      ctx.moveTo(x,y-r*2.2);ctx.lineTo(x,y+r*2.2);ctx.stroke();
+    }
+  }
+
+  // Keep the glittery pink scratch cover clean, with no initials or text.
   ctx.restore();
-  ctx.fillStyle="#6c2639";ctx.textAlign="center";ctx.font=`${Math.max(11,rect.width*.045)}px DM Sans, sans-serif`;ctx.fillText("SCRATCH TO REVEAL",rect.width/2,rect.height*.48);
-  ctx.font=`${Math.max(25,rect.width*.12)}px Cormorant Garamond, Georgia, serif`;ctx.fillText("✧  H & N  ✧",rect.width/2,rect.height*.59);
   ctx.globalCompositeOperation="destination-out";revealed=false;heart.classList.remove("revealed");
 }
 function pointFromEvent(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
 function scratchLine(p){ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=Math.max(27,canvas.clientWidth*.105);ctx.globalCompositeOperation="destination-out";ctx.beginPath();if(lastPoint){ctx.moveTo(lastPoint.x,lastPoint.y)}else{ctx.moveTo(p.x,p.y)}ctx.lineTo(p.x,p.y);ctx.stroke();lastPoint=p;scratched=true;}
 function scratchedRatio(){
-  const w=canvas.width,h=canvas.height;const data=ctx.getImageData(0,0,w,h).data;let clear=0,total=0;
-  // Sample every 16 pixels for performance.
-  for(let i=3;i<data.length;i+=64){total++;if(data[i]<30)clear++}
+  // Measure only pixels inside the heart, not the transparent canvas corners.
+  // The old version counted those corners as part of the scratchable area,
+  // which made the reveal threshold inconsistent across screen sizes.
+  const w=canvas.width,h=canvas.height;
+  const pixels=ctx.getImageData(0,0,w,h).data;
+  const mask=document.createElement("canvas");
+  mask.width=w; mask.height=h;
+  const mctx=mask.getContext("2d");
+  const dpr=w/Math.max(1,canvas.clientWidth);
+  mctx.scale(dpr,dpr);
+  heartPath(mctx,canvas.clientWidth,canvas.clientHeight);
+  mctx.scale(1/dpr,1/dpr);
+  mctx.fillStyle="#fff";mctx.fill();
+  const maskData=mctx.getImageData(0,0,w,h).data;
+  let clear=0,total=0;
+  // Sample regularly for performance; include only points inside the heart.
+  const step=12;
+  for(let y=0;y<h;y+=step){
+    for(let x=0;x<w;x+=step){
+      const i=(y*w+x)*4;
+      if(maskData[i+3]>0){
+        total++;
+        if(pixels[i+3]<30)clear++;
+      }
+    }
+  }
   return total?clear/total:0;
 }
-function finishScratch(){if(revealed)return;revealed=true;drawing=false;lastPoint=null;heart.classList.add("revealed");document.getElementById("scratchInstruction").textContent="The day we begin forever — 4 December 2026";petalShower();setTimeout(()=>document.getElementById("countdown").scrollIntoView({behavior:"smooth"}),2300);}
-canvas.addEventListener("pointerdown",e=>{if(revealed)return;drawing=true;lastPoint=null;canvas.setPointerCapture?.(e.pointerId);scratchLine(pointFromEvent(e));e.preventDefault();});
-canvas.addEventListener("pointermove",e=>{if(!drawing||revealed)return;scratchLine(pointFromEvent(e));e.preventDefault();if(scratched&&Math.random()<.09&&scratchedRatio()>.36)finishScratch();});
-function stopScratch(){if(!drawing)return;drawing=false;lastPoint=null;if(scratched&&scratchedRatio()>.34)finishScratch();}
-canvas.addEventListener("pointerup",stopScratch);canvas.addEventListener("pointercancel",stopScratch);canvas.addEventListener("pointerleave",stopScratch);
+function finishScratch(){
+  if(revealed)return;
+  revealed=true;drawing=false;lastPoint=null;
+  rememberDateRevealed();
+  heart.classList.add("revealed");
+  canvas.style.opacity="0";
+  canvas.style.pointerEvents="none";
+  document.getElementById("scratchInstruction").textContent="The day we begin forever — 4 December 2026";
+  petalShower();
+  setTimeout(()=>document.getElementById("countdown").scrollIntoView({behavior:"smooth"}),2300);
+}
+canvas.addEventListener("pointerdown",e=>{
+  if(revealed)return;
+  drawing=true;lastPoint=null;
+  if(canvas.setPointerCapture)canvas.setPointerCapture(e.pointerId);
+  scratchLine(pointFromEvent(e));e.preventDefault();
+});
+canvas.addEventListener("pointermove",e=>{
+  if(!drawing||revealed)return;
+  scratchLine(pointFromEvent(e));e.preventDefault();
+});
+function stopScratch(){
+  if(!drawing)return;
+  drawing=false;lastPoint=null;
+  if(scratched&&scratchedRatio()>.32)finishScratch();
+}
+canvas.addEventListener("pointerup",stopScratch);
+canvas.addEventListener("pointercancel",stopScratch);
 function petalShower(){const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduce)return;const chars=["✿","❀","✽","✾"];for(let i=0;i<42;i++){const p=document.createElement("span");p.className="petal";p.textContent=chars[i%chars.length];p.style.left=Math.random()*100+"vw";p.style.fontSize=(12+Math.random()*18)+"px";p.style.setProperty("--drift",`${(Math.random()-.5)*180}px`);p.style.animationDuration=(3.5+Math.random()*4)+"s";p.style.animationDelay=(Math.random()*1.7)+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),8500);}}
-document.getElementById("scratchReset").addEventListener("click",()=>{scratched=false;setupScratch();document.getElementById("scratchInstruction").textContent="✦ Scratch gently with your finger or mouse ✦";});
-let resizeTimer;window.addEventListener("resize",()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(!drawing)setupScratch()},180);});setupScratch();
+let resizeTimer;window.addEventListener("resize",()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(!drawing&&!revealed)setupScratch()},180);});setupScratch();
 
 // Live IST countdown.
 function updateCountdown(){const diff=weddingTimestamp-Date.now();if(diff<=0){["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="0");document.getElementById("countdownMessage").textContent="Today, we begin forever. Thank you for celebrating with us.";return;}const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById("days").textContent=d;document.getElementById("hours").textContent=String(h).padStart(2,"0");document.getElementById("minutes").textContent=String(m).padStart(2,"0");document.getElementById("seconds").textContent=String(s).padStart(2,"0");}
@@ -1137,7 +1278,7 @@ footer .names{font-size:clamp(2rem,5vw,2.7rem);}
 .event-card .event-rule:before{content:"";position:absolute;left:0;right:0;top:4px;border-top:1px solid var(--gold);}
 .event-card .event-rule:after{content:"◆";position:absolute;left:50%;top:-2px;transform:translateX(-50%);font-size:8px;color:var(--gold);background:#f8f1e7;padding:0 7px;}
 .section-title:after{opacity:.88;}
-#reveal .scratch-heart:after{content:"";position:absolute;inset:7%;border:1px solid rgba(173,130,70,.17);border-radius:48%;pointer-events:none;z-index:1;}
+#reveal .scratch-heart:after{content:none!important;display:none!important;}
 .btn{transition:transform .28s ease,background-color .28s ease,border-color .28s ease,box-shadow .28s ease;}
 .btn:active{transform:translateY(0) scale(.985);}
 .nav .brand{font-size:clamp(18px,2vw,23px);}
@@ -1212,3 +1353,45 @@ footer .names{color:var(--wine)!important;font-size:clamp(2.7rem,6vw,4rem)!impor
 
 </body>
 </html>
+
+<style>
+/* Keep the scratch-date artwork heart-only: no orbit, oval, or circle behind it. */
+#reveal .scratch-heart:after{content:none!important;display:none!important;}
+#reveal .scratch-heart{background:transparent!important;}
+</style>
+
+<style>
+/* Option 2: dusty-pink embossed invitation cover, restrained and romantic. */
+#reveal .scratch-shell{
+  border:1px solid rgba(176,138,105,.28)!important;
+  outline:none!important;
+  background:rgba(255,250,246,.48)!important;
+  box-shadow:none!important;
+}
+#reveal .scratch-heart svg path:first-child{
+  fill:#fff8f1!important;
+  stroke:#b68a4b!important;
+  stroke-width:1.8!important;
+}
+#reveal .scratch-heart svg path:nth-child(2){
+  display:none!important;
+}
+#reveal .scratch-instruction{
+  margin-top:24px!important;
+  color:#8b6d70!important;
+  letter-spacing:.055em!important;
+  font-size:.82rem!important;
+}
+</style>
+
+<style>
+/* Final scratch-heart polish: matching silhouettes, no inset ring, no horizontal texture. */
+#reveal .scratch-heart svg path:first-child{
+  fill:#fff8f1!important;
+  stroke:#b68a4b!important;
+  stroke-width:1.8!important;
+}
+#reveal .scratch-heart svg path:nth-child(2){display:none!important;}
+#reveal .scratch-heart canvas{border-radius:0!important;}
+#reveal .scratch-heart{filter:drop-shadow(0 13px 15px rgba(119,57,77,.13))!important;}
+</style>
